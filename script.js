@@ -24,64 +24,8 @@ window.addEventListener("load", function() {
          }
       });
    });
-
-
-/* This block of code shows how to format the HTML once you fetch some planetary JSON!
-<h2>Mission Destination</h2>
-<ol>
-   <li>Name: ${}</li>
-   <li>Diameter: ${}</li>
-   <li>Star: ${}</li>
-   <li>Distance from Earth: ${}</li>
-   <li>Number of Moons: ${}</li>
-</ol>
-<img src="${}">
-*/
-
-
    let form = document.querySelector("form");
    form.addEventListener("submit", function(event){
-      // // let pilotName = document.getElementById("pilotName").value;
-      // // let copilotName = document.getElementById("copilotName").value;
-      // // let fuelLevel = document.getElementById("fuelLevel").value;
-      // // let cargoMass = document.getElementById("cargoMass").value;
-       
-      // if(pilotName.value === "") {
-      //    alert("All Fields Required!");
-      //    event.preventDefault();
-      // } else {
-      //    pilotStatus.innerHTML = `Pilot Name: ${pilotName.value}`
-      // };
-
-      // if(copilotName.value === "") {
-      //    alert("All Fields Required!");
-      //    event.preventDefault();
-      // } else {
-      //    copilotStatus.innerHTML = `Copilot Name: ${copilotName.value}`
-      // };
-
-      // if(fuelLevel.value === "") {
-      //    alert("All Fields Required!");
-      //    event.preventDefault();
-      // } else if(fuelLevel.value < 10000) {
-      //    faultyItems.style.visibility= 'visible';
-      //    fuelStatus.innerHTML =`Not enough fuel for the journey!`;
-      //    launchStatus.style.color = "red";
-      //    launchStatus.innerHTML = `Shuttle not ready for launch.`;
-      // } else {
-      //    fuelStatus.innerHTML = `Fuel Level: ${fuelLevel.value}`
-      // };
-
-      // if(cargoMass.value === "") {
-      //    alert("All Fields Required!");
-      //    event.preventDefault();
-      // } else {
-      //    cargoStatus.innerHTML = `${cargoMass.value}`
-      // };
-       
-   
-   
-   
    
        if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
        alert("All fields are required!");
