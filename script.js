@@ -4,26 +4,27 @@ window.addEventListener("load", function() {
    let copilotName = document.getElementById("copilotName");
    let fuelLevel = document.getElementById("fuelLevel");
    let cargoMass = document.getElementById("cargoMass");
-
-   fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+   let json=[];
+   fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
       response.json().then(function(json) {
-         const missionTarget = document.getElementById("missionTarget");
-         
-         for(let index=0; index < json.results.length; index++) {
-         missionTarget.innerHTML += `
+         const div = document.getElementById("missionTarget");
+         let index = Math.floor(Math.random()*json.length);
+         div.innerHTML += `
          <h2>Mission Destination</h2>
 <ol>
-   <li>Name: ${json.results[index].name}</li>
-   <li>Diameter: ${json.results[index].diameter}</li>
-   <li>Star: ${json.results[index].star}</li>
-   <li>Distance from Earth: ${json.results[index].distance}</li>
-   <li>Number of Moons: ${json.results[index].moons}</li>
+   <li>Name: ${json[index].name}</li>
+   <li>Diameter: ${json[index].diameter}</li>
+   <li>Star: ${json[index].star}</li>
+   <li>Distance from Earth: ${json[index].distance}</li>
+   <li>Number of Moons: ${json[index].moons}</li>
 </ol>
-<img src="${json[index].image}">
-         `;
-         }
+<img src="${json[index].image}"></img>
+         `
+       
       });
    });
+   
+
    let form = document.querySelector("form");
    form.addEventListener("submit", function(event){
    
